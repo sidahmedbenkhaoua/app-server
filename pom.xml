@@ -8,6 +8,18 @@
     <artifactId>app-server</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <developers>
+        <developer>
+            <id>sbenkhaoua</id>
+            <email>sidahmed.benkhaoua@gmail.com</email>
+            <name>Sidahmed Benkhaoua</name>
+            <url>http://benkhaouas.blogspot.com/</url>
+            <roles>
+                <role>Developer</role>
+            </roles>
+        </developer>
+    </developers>
+
     <dependencies>
         <dependency>
             <groupId>org.glassfish.tyrus</groupId>
@@ -27,16 +39,4 @@
             <version>1.0</version>
         </dependency>
     </dependencies>
-
-    <developers>
-        <developer>
-            <id>sbenkhaoua</id>
-            <email>sidahmed.benkhaoua@gmail.com</email>
-            <name>sidahmed benkhaoua</name>
-            <url>http://benkhaouas.blogspot.com/</url>
-            <roles>
-                <role>devlopper</role>
-            </roles>
-        </developer>
-    </developers>
 </project>
