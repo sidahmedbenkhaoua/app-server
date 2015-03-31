@@ -1,8 +1,7 @@
+package sbenkhaoua.app.tools.spec;
+
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.tyrus.server.Server;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 
 /**
  * Created by sbenkhaoua on 31/03/15.

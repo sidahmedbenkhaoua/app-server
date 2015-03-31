@@ -1,3 +1,5 @@
+package sbenkhaoua.app.tools.spec;
+
 import org.glassfish.tyrus.client.ClientManager;
 
 import javax.websocket.*;

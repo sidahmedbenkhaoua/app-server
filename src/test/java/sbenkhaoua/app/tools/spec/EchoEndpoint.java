@@ -1,3 +1,5 @@
+package sbenkhaoua.app.tools.spec;
+
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;

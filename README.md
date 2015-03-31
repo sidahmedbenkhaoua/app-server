@@ -4,7 +4,7 @@ this is simple applicatio java implimentation api tyrus based in glassfish
 to deploye application :
 1-meven 2 or 3 
 2-maven install 
-open project in your ide eclipse or netbeanse or intelig ide and run class ***SampleStandalone***
+open project in your ide eclipse or netbeanse or intelig ide and run class ***sbenkhaoua.app.tools.spec.SampleStandalone***
 and try to write a simple page html to connect to this socket 
 ***index.html***
 
