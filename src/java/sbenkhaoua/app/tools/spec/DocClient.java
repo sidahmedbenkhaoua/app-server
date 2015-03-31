@@ -12,12 +12,12 @@ import java.util.concurrent.TimeUnit;
  * Created by sbenkhaoua on 31/03/15.
  */
 public class DocClient {
-    private CountDownLatch messageLatch;
     private static final String SENT_MESSAGE = "Hello World";
+    private CountDownLatch messageLatch;
 
-    public static void main(String [] args){
+    public static void main(String[] args) {
         try {
-            final CountDownLatch   messageLatch = new CountDownLatch(1);
+            final CountDownLatch messageLatch = new CountDownLatch(1);
 
             final ClientEndpointConfig cec = ClientEndpointConfig.Builder.create().build();
 
@@ -31,7 +31,7 @@ public class DocClient {
 
                             @Override
                             public void onMessage(String message) {
-                                System.out.println("Received message: "+message);
+                                System.out.println("Received message: " + message);
                                 messageLatch.countDown();
                             }
                         });
