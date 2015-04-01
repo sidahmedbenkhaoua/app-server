@@ -1,6 +1,6 @@
-# app-server 
-***java web  socket***  
-This simple application is a Java implementation for the tyrus API based on glassfish.  
+# app-server
+This is a simple application to test [Tyrus](https://tyrus.java.net/), the reference implementation for JSR356: Java 
+API for [WebSocket](https://en.wikipedia.org/wiki/WebSocket).  
 
 
 ## Deploy the app
