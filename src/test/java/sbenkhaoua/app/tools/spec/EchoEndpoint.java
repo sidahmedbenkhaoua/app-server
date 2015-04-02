@@ -1,5 +1,10 @@
 package sbenkhaoua.app.tools.spec;
 
+import sbenkhaoua.app.modules.car.controller.CareDecoder;
+import sbenkhaoua.app.modules.car.controller.CareEncoder;
+import sbenkhaoua.app.modules.car.model.Car;
+import sbenkhaoua.appa.tools.CassandraConnection;
+
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
@@ -7,11 +12,15 @@ import java.io.IOException;
 /**
  * Created by sbenkhaoua on 31/03/15.
  */
-@ServerEndpoint(value = "/echo")
+@ServerEndpoint(value = "/echo", encoders = {CareEncoder.class}, decoders = {CareDecoder.class})
 public class EchoEndpoint {
+    private CassandraConnection cassandraConnection ;
+
+
 
     @OnOpen
     public void onOpen(Session session, EndpointConfig config) throws IOException {
+        cassandraConnection =new CassandraConnection();
         System.out.println("onOpen: " + session);
     }
 
@@ -21,15 +30,22 @@ public class EchoEndpoint {
     }
 
     @OnMessage
-    public void onMessage(Session session, String message) {
-        System.out.println("onMessage: " + session + ", " + message);
-        for (Session s : session.getOpenSessions()) {
-            s.getAsyncRemote().sendText(message);
-        }
+    public void onMessage(Car car, Session session) {
+        cassandraConnection.insert(car);
+       //System.out.println("onMessage: " + ", " + car);
+
     }
 
     @OnError
     public void onError(Session session, Throwable t) {
         System.out.println("onError: " + session + ", " + t);
     }
+    public CassandraConnection getCassandraConnection() {
+        return cassandraConnection;
+    }
+
+    public void setCassandraConnection(CassandraConnection cassandraConnection) {
+        this.cassandraConnection = cassandraConnection;
+    }
+
 }

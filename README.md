@@ -8,12 +8,11 @@ open project in your ide eclipse or netbeanse or intelig ide and run class ***sb
 and try to write a simple page html to connect to this socket 
 ***index.html***
 
-
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>WebSocket Client</title>
+    <html>
+        <head>
+        <meta charset="UTF-8">
+         <title>WebSocket Client</title>
 
     <script type="text/javascript">
         var webSocket_;

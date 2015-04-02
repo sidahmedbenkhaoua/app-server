@@ -2,6 +2,7 @@ package sbenkhaoua.app.tools.spec;
 
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.tyrus.server.Server;
+import sbenkhaoua.appa.tools.CassandraConnection;
 
 /**
  * Created by sbenkhaoua on 31/03/15.
@@ -20,6 +21,7 @@ public class SampleStandalone {
     public static void main(String[] args) {
         Server server = new Server(HOST, WEB_SOCKET_PORT, WEB_SOCKET_CONTEXT, EchoEndpoint.class);
         HttpServer httpServer = HttpServer.createSimpleServer(HTTP_SERVER_CONTEXT_ROOT, HOST, HTTP_SERVER_PORT);
+
         try {
             server.start();
             httpServer.start();
